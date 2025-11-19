@@ -1,63 +1,61 @@
-import Image from "next/image";
+'use client';
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+      <main className="w-full max-w-2xl px-6 py-12">
+        <div className="rounded-2xl bg-white p-12 shadow-2xl dark:bg-gray-800">
+          <div className="mb-12 text-center">
+            <h1 className="mb-4 text-5xl font-bold text-gray-900 dark:text-white">
+              Intellicours
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Résumez, synthétisez et testez vos cours avec l'IA
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
+            <Link
+              href="/resume"
+              className="group rounded-lg border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100 p-8 text-center transition-all hover:border-blue-400 hover:shadow-lg dark:border-blue-900 dark:from-gray-700 dark:to-gray-600 dark:hover:border-blue-700"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <div className="mb-3 text-4xl">📝</div>
+              <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                Résumer un cours
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Uploadez ou collez votre cours pour obtenir un résumé structuré
+              </p>
+            </Link>
+
+            <Link
+              href="/fiche"
+              className="group rounded-lg border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-purple-100 p-8 text-center transition-all hover:border-purple-400 hover:shadow-lg dark:border-purple-900 dark:from-gray-700 dark:to-gray-600 dark:hover:border-purple-700"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+              <div className="mb-3 text-4xl">📊</div>
+              <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
+                Fiche de synthèse
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Créez une fiche bien structurée à partir de vos notes
+              </p>
+            </Link>
+
+            <Link
+              href="/quiz"
+              className="group rounded-lg border-2 border-green-200 bg-gradient-to-br from-green-50 to-green-100 p-8 text-center transition-all hover:border-green-400 hover:shadow-lg dark:border-green-900 dark:from-gray-700 dark:to-gray-600 dark:hover:border-green-700"
+            >
+              <div className="mb-3 text-4xl">❓</div>
+              <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">
+                Générer un quiz
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Testez vos connaissances avec des questions générées
+              </p>
+            </Link>
+          </div>
         </div>
       </main>
     </div>
