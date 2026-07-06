@@ -9,7 +9,7 @@ export default function Home() {
         <div className="rounded-2xl bg-white p-12 shadow-2xl dark:bg-gray-800">
           <div className="mb-12 text-center">
             <h1 className="mb-4 text-5xl font-bold text-gray-900 dark:text-white">
-              Intellicours
+              Cours à la maison
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300">
               Résumez, synthétisez et testez vos cours avec l'IA
